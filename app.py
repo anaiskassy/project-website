@@ -58,18 +58,21 @@ if st.button("Apply") :
         if uploaded_file is not None:
             st.image(up_image.resize((300,300)))
         else :
-            st.image(array_2)
+            else_in = Image.open('input.png').resize((300,300))
+            st.image(else_in)
 
     with center :
         st.subheader('Damaged image')
         if image_damaged is not None:
             st.image(image_damaged)
         else :
-            st.image(array_2)
+            else_dam = Image.open('damage.png').resize((300,300))
+            st.image(else_dam)
 
     with right :
         st.subheader('Predicted image')
         if image_rebuild is not None:
             st.image(image_rebuild)
         else :
-            st.image(array_2)
+            else_out = Image.open(f'output{model}.png').resize((300,300))
+            st.image(else_out)
