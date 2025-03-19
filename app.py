@@ -47,8 +47,8 @@ if st.button("Apply") :
 
     if uploaded_file is not None:
 
-        image_damaged_byt = requests.post(url_local+'/preproc',files={'file':image_bytes}).content
-        image_rebuild_byt = requests.get(url_local+'/predict',params={'model':model}).content
+        image_damaged_byt = requests.post(url+'/preproc',files={'file':image_bytes}).content
+        image_rebuild_byt = requests.get(url+'/predict',params={'model':model}).content
 
         image_damaged = Image.open(BytesIO(image_damaged_byt)).resize((300,300))
         image_rebuild = Image.open(BytesIO(image_rebuild_byt)).resize((300,300))
