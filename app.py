@@ -29,7 +29,7 @@ with _2 :
         'model 1' : ['model de base avec output complet - petits démons - 17 000 entraînements sur 30 000 images',1],
         'model 2' : ['model de base avec output partiel - 19 000 entraînements sur 30 000 images',2],
         'model 3' : ["model complexe d'encodage et décodage - 14 000 entraînements sur 30 000 images",3],
-        'model 4' : ["model complexe d'encodage et décodage combiné - 0 entraînements sur 30 000 images",4]
+        'model 4' : ["model complexe d'encodage et décodage combiné - 150 000 entraînements sur 30 000 images",4]
     }
 
 st.write(f'{model_selection} : {explanations[model_selection][0]}')
