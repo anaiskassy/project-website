@@ -40,7 +40,6 @@ model = explanations[model_selection][1]
 '''
 if st.button("Apply") :
     left, center, right = st.columns(3)
-    array_2 = np.load("array_2.npy")
     image_damaged = None
     image_rebuild = None
 
